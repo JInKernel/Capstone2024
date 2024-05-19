@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db',
+        'USER': 'root',
+        'PASSWORD': 'my-secret-pw',
+        'HOST': 'localhost',  # Use the IP address from step 1
+        'PORT': '3306',
     }
 }
 
@@ -117,9 +121,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATICFILES_DIRS = [ 
-    os.path.join(BASE_DIR, "static"),
-]
+# STATICFILES_DIRS = [ 
+#     os.path.join(BASE_DIR, "static"),
+# ]
 
 STATIC_URL = 'static/'
 
