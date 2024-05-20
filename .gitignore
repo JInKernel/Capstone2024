@@ -205,4 +205,5 @@ cython_debug/
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/linux,visualstudiocode,django
+# End of https://www.toptal.com/developers/gitignore/api/linux,visualstudiocode,djangomysql/ca-key.pem
+mysql/
