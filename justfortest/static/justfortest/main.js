@@ -18,14 +18,6 @@ function start_btn() {
 
 }
 
-function hide_order_list() {
-    var list = document.getElementsByClassName("cart");
-    for (i = 0; i < list.length; i++) {
-        list[i].style.display = 'none';
-    }
-}
-
-
 var menu_list = ["추천_음료"];
 function open_menu_table(id) {
     all_menu_none();
@@ -323,3 +315,6 @@ const drinks = [
 
 displayDrinks(drinks);
 
+window.onload = function() {
+    start_btn();
+}

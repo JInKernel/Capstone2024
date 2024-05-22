@@ -21,3 +21,4 @@ urlpatterns = [
     path('', include("justfortest.urls")),
     path('admin/', admin.site.urls),
 ]
+    

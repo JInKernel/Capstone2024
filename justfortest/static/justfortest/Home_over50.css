@@ -25,6 +25,17 @@ body {
     justify-content: center;
     
 }
+#mega_start_img,
+#mega_start_btn {
+    display: none; /* 시작부터 보이지 않게 설정 */
+}
+
+#mega_order,
+#mega_menu_table,
+#nextpage,
+#pay {
+    display: block; /* 시작부터 보이게 설정 */
+}
 
 
 /*할지 말지 모르겠는 홈버튼*/
