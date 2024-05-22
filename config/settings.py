@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test',
+        'NAME': 'django_kiosk',
         'USER': 'root',
         'PASSWORD': 'test1234',
         'HOST': 'db',  # This should match the service name in Docker Compose
