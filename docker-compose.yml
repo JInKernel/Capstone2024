@@ -16,8 +16,8 @@ services:
     container_name: django_web
     command: >
       sh -c "python wait_for_db.py &&
-         python manage.py migrate &&
-         python manage.py runserver 0.0.0.0:8000"
+      python manage.py migrate &&
+      gunicorn config.wsgi:application --bind 0.0.0.0:8000"
     volumes:
       - .:/app
     ports:
@@ -29,7 +29,16 @@ services:
       - DB_USER=root
       - DB_PASSWORD=test1234
       - DB_HOST=db
-      - DB_PORT=3306
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "1234:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./staticfiles:/static
+    depends_on:
+      - web
 
 volumes:
   mysql:

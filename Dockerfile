@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y default-libmysqlclient-dev gcc pkg-conf
 RUN pip install -r requirements.txt
 RUN pip install mysqlclient
 RUN pip install mysql-connector-python
+RUN pip install gunicorn
 
 # Start the Django development server 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
