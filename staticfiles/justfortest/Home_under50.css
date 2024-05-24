@@ -26,10 +26,6 @@ body {
     
 }
 
-#pay {
-    display: block; /* 시작부터 보이게 설정 */
-}
-
 
 /*할지 말지 모르겠는 홈버튼*/
 .homebtn {
@@ -139,7 +135,7 @@ body {
 }
 
 .kiosk_mega_backdround { /*검정 기계 배경*/
-    width: 380px;
+    width: 360px;
     height: 95vh;
     background-color: black;
     border-radius: 15px;
@@ -147,7 +143,7 @@ body {
 }
 
 .kiosc_mega_screen { /*터치스크린 배경*/
-    width: 360px;
+    width: 340px;
     height: 72vh;
     background-color: #F7F7F7;
     border-radius: 15px;
@@ -232,7 +228,9 @@ body {
 #row {
     display: flex;
     justify-content: flex-start;
+    
     width: 97%;
+   
     padding-top: 5px;
     padding-left: 5px;
     padding-right: 5px;
@@ -240,10 +238,9 @@ body {
 }
 
 #row div {
-    width: 22.5%; /* 컨테이너의 50%보다 약간 작게 설정하여 여백을 만듭니다. */
-    height: 20vh; /* 높이는 조정 가능합니다. 2x2 구조에 맞게 조정하세요. */
-    margin: 1%; /* 각 항목 사이의 여백을 만들기 위한 설정 */
-    
+    width: 23%;
+    height: 13vh;
+
 }
 
 
