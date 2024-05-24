@@ -14,5 +14,5 @@ def over60(request):
 
 
 def get_prediction(request):
-    return JsonResponse({"prediction": "under"})
+    return JsonResponse({"prediction": "over"})
 

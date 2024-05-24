@@ -30,6 +30,16 @@ services:
       - DB_PASSWORD=test1234
       - DB_HOST=db
       - DB_PORT=3306
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "5678:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./staticfiles:/static
+    depends_on:
+      - web
 
 volumes:
   mysql:
