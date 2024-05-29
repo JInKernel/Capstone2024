@@ -35,11 +35,13 @@ services:
     container_name: nginx
     ports:
       - "5678:80"
+      - "9999:443"
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - ./staticfiles:/static
+      - /etc/letsencrypt:/etc/letsencrypt
     depends_on:
       - web
 
 volumes:
-  mysql:
+  mysql:  
