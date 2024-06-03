@@ -34,14 +34,22 @@ services:
     image: nginx:latest
     container_name: nginx
     ports:
-      - "5678:80"
-      - "9999:443"
-    volumes:
+      - "80:80"
+      - "443:443"
+    volumes:  
       - ./nginx:/etc/nginx/conf.d
       - ./staticfiles:/static
-      - /etc/letsencrypt:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/conf:/etc/letsencrypt
     depends_on:
       - web
+      - certbot
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
 
 volumes:
   mysql:  
