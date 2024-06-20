@@ -7,7 +7,23 @@
 6. 결제 관련 페이지 뜸
 7. 담은 항복 가려짐
 */
+const videoOutput = document.getElementById("webcam");
+const constraints = {audio: false, video: true};
+
+navigator.mediaDevices.getUserMedia(constraints)
+  .then(function(mediaStream){
+    // MediaStream을 HTMLVideoElement의 srouce로 설정
+    videoOutput.srcObject = mediaStream;
+    // metadata가 로드될 때 실행되는 이벤트
+    videoOutput.onloadedmetadata = function() {
+      // HTMLVideoElement로 카메라의 화면을 출력하기 시작
+      videoOutput.play();
+    };
+  })
+
+
 function start_btn() {  
+    
     fetch('/get-prediction/') // '/get-prediction/'은 AI 모델의 예측값을 반환하는 Django 뷰의 URL입니다.
         .then(response => response.json()) // 응답을 JSON 형식으로 파싱합니다.
         .then(data => {
@@ -24,5 +40,6 @@ function start_btn() {
             }
         });
 }
+
 
 

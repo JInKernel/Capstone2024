@@ -25,6 +25,13 @@ body {
     justify-content: center;
     
 }
+#webcam {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 150px;
+}
 
 #pay {
     display: block; /* 시작부터 보이게 설정 */
