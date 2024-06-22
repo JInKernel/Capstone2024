@@ -13,40 +13,39 @@
 <body>
     <!--this is Linux Environment-->
 
-    <h1>웹캠 테스트</h1>
-    <video id="webcam" width="640" height="480" autoplay playsinline></video>
+    <div class="container" style="position: relative;">
+        <video id="webcam" style="width: 400px; height: 300px; position: absolute; left: 0; top: 0;" autoplay playsinline></video>
+        <div class="kiosk_simulation">
+
+            <div class="kiosk_mega_backdround">
+
+                <div class="kiosc_mega_screen">
 
 
-    <div class="kiosk_simulation">
-
-        <div class="kiosk_mega_backdround">
-
-            <div class="kiosc_mega_screen">
-
-
-                <div id="mega_start_img">
-                    <button id="mega_start_btn" onclick="start_btn()"></button>
-                </div>
-                <div id="screen_bottom">
-                    <div id="barcode">
-                        <div id="barcode_img"></div>
-                        <div>바코드를 대주세요</div>
-                        <div id="barcode_png"></div>
+                    <div id="mega_start_img">
+                        <button id="mega_start_btn" onclick="start_btn()"></button>
                     </div>
-                    <div id="insert_card">
-                        <div>카드를 넣어주세요</div>
-                        <div id="insert_card_block"></div>
-                        <div id="use_card_block">_______________________________</div>
-                        <div>카드를 긁어주세요</div>
-                        <div id="receipt">
-                            <div id="receipt_exit"></div>
-                            <div id="receipt_img"></div>
+                    <div id="screen_bottom">
+                        <div id="barcode">
+                            <div id="barcode_img"></div>
+                            <div>바코드를 대주세요</div>
+                            <div id="barcode_png"></div>
+                        </div>
+                        <div id="insert_card">
+                            <div>카드를 넣어주세요</div>
+                            <div id="insert_card_block"></div>
+                            <div id="use_card_block">_______________________________</div>
+                            <div>카드를 긁어주세요</div>
+                            <div id="receipt">
+                                <div id="receipt_exit"></div>
+                                <div id="receipt_img"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
+    </div>
 
 
         <script src="{% static 'justfortest/main_start.js' %}"></script>

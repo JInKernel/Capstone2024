@@ -308,9 +308,10 @@ const drinks = [
     { id: "유니콘프라페", title: "no_option", price: 4800 },
     { id: "딸기쿠키프라페", title: "no_option", price: 3900 },
     { id: "커피프라페", title: "no_option", price: 3900 },
-   
-    
-    
+    { id: "hot_카메모카", title: "coldbrew", price: 3900 },
+    { id: "hot_유자차", title: "coldbrew", price: 3900 },
+
+
 ];
 
 displayDrinks(drinks);
