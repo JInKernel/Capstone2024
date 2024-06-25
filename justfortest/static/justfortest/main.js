@@ -291,7 +291,7 @@ function displayDrinks(drinks) {
     });
 
     // 마지막 row에 남은 음료들을 container에 추가
-    // (이 코드 블럭은 forEach 루프가 종료된 후에 실행됩니다)
+   
     if (count > 0) {
         container.appendChild(row);
     }
